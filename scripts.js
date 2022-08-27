@@ -61,7 +61,7 @@ function rpsGame(){
                     score[2]++
                     return "Scissors-Paper! You lose! Get got.";
                 } else {
-                    return "Rock Error: Something unexpected rockurred.";
+                    return "Scissor Error: Scissor me timbers! Something untoward occurred!";
                 }
                 break;
             // set default message to "something horribly wrong has happened"
