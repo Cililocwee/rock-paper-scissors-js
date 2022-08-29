@@ -9,14 +9,14 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: blue;
+    /*background-color: blue;*/
 }
 
 .scoreboard {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: orange;
+    /*background-color: orange;*/
 }
 
 .scorebox {
@@ -25,7 +25,7 @@
     justify-content: center;
     margin: 10px;
     padding: 10px 50px;
-    background-color: yellowgreen;
+    /*background-color: yellowgreen;*/
 }
 
 .wins,
@@ -35,7 +35,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: purple;
+    /*background-color: purple*/
 }
 
 .announcements {
@@ -43,7 +43,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: pink;
+    /*background-color: pink;*/
 }
 
 .scrolling-announcements {
@@ -52,10 +52,5 @@
     align-items: center;
     width: 350px;
     height: 40px;
-    background-color: red;
-}
-
-.win-span {
-    color: green;
-    font-weight: bold;
+    /*background-color: red;*/
 }
