@@ -49,6 +49,13 @@
 .scrolling-announcements {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 350px;
+    height: 40px;
     background-color: red;
+}
+
+.win-span {
+    color: green;
+    font-weight: bold;
 }
