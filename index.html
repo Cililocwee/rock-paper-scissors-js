@@ -5,10 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button onclick="rpsGame()">Click</button> 
+
+    <div class="announcements">
+        <h1>Welcome to Rock-Paper-Scissors</h1>
+        <div id="scroll" class="scrolling-announcements">
+            <p>Beat the computer...</p> <!--default message-->
+        </div>
+    </div>
+
+    <div class="choices">
+        <img id="rock-pic" src="rock.jpg" class="rock" alt="rumblerumble">
+        <img id="paper-pic" src="paper.jpg" class="paper" alt="crinklecrinkle">
+        <img id="scissors-pic" src="scissors.jpg" class="scissors" alt="snipsnip">
+    </div>
+
+    <div class="scoreboard">
+        <div class="wins">
+            <div class="label">
+                <h4>Wins</h4>
+            </div>
+            <div class="scorebox">
+                <p id="win-id" class="score">0</p>
+            </div>
+        </div>
+
+        <div class="losses">
+            <div class="label">
+                <h4>Losses</h4>
+            </div>
+            <div class="scorebox">
+                <p id="lose-id" class="score">0</p>
+            </div>
+        </div>
+
+        <div class="draws">
+            <div class="label">
+                <h4>Draws</h4>
+            </div>
+            <div class="scorebox">
+                <p id="draw-id" class="score">0</p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
