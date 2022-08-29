@@ -12,18 +12,18 @@ const paper = document.getElementById('paper-pic');
 const scissors = document.getElementById('scissors-pic');
 
 rock.addEventListener('click', () => {
-    alert(rock.id);
+    rpsGame("rock"); // it should take input and choose rock
 });
 
 paper.addEventListener('click', () => {
-    alert(paper.id);
+    rpsGame("paper");
 });
 
 scissors.addEventListener('click', () => {
-    alert(scissors.id);
+    rpsGame("scissors");
 });
 
-function rpsGame(){    
+function rpsGame(userChoice){    
     // make function rockPaperScissors that takes input as "userChoice"
     function rockPaperScissors(userChoice) {
         // take userChoice in variable 'userThrow'
