@@ -23,11 +23,14 @@ scissors.addEventListener('click', () => {
     rpsGame("scissors");
 });
 
-function rpsGame(userChoice){    
-    // make function rockPaperScissors that takes input as "userChoice"
-    function rockPaperScissors(userChoice) {
-        // take userChoice in variable 'userThrow'
-        let userThrow = userChoice;
+const winScore = document.getElementById('win-id');
+const loseScore = document.getElementById('lose-id');
+const drawScore = document.getElementById('draw-id');
+
+function rpsGame(userThrow){    
+    // make function rockPaperScissors that takes input as "userThrow"
+    function rockPaperScissors(userThrow) {
+        
         // take random number between 1 - 3 in computerThrow
         let computerThrow = Math.floor(Math.random()*3);
         // * 0 is rock 1 is paper 2 is scissors *
@@ -103,25 +106,29 @@ function rpsGame(userChoice){
     // keep track of wins, draws, loses
     let score =[0,0,0]
 
+
+    let result = rockPaperScissors(userThrow);
+    alert(result);
+    
     // start while loop (as long as keepGoing is true)
-    while(keepGoing){
+   // while(keepGoing){
         
         
         // (prompt user "rock - paper - scissors? >") in variable gamePrompt
         // make sure gamePrompt string is all lower case
-        let gamePrompt = prompt("rock - paper - scissors? >").toLowerCase();
+        // let gamePrompt = prompt("rock - paper - scissors? >").toLowerCase();
         
         // put gamePrompt in rockPaperScissors
-        let result = rockPaperScissors(gamePrompt);
-        alert(result);
+       // let result = rockPaperScissors(userThrow);
+       // alert(result);
 
         // ask if user would like to continue or not
-        let continuePrompt = prompt("Would you like to continue? >");
-        if(continuePrompt === 'n'){
-            alert(`You won ${score[0]} times, drew ${score[1]} times, and lost ${score[2]} times! Try again next time.`);
-            keepGoing = false;
-        }
+        // let continuePrompt = prompt("Would you like to continue? >");
+        //if(continuePrompt === 'n'){
+          //  alert(`You won ${score[0]} times, drew ${score[1]} times, and lost ${score[2]} times! Try again next time.`);
+            //keepGoing = false;
+        //}
     }
-} 
+
 
 
