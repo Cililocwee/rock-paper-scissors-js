@@ -23,9 +23,7 @@ scissors.addEventListener('click', () => {
     rpsGame("scissors");
 });
 
-const winScore = document.getElementById('win-id');
-const loseScore = document.getElementById('lose-id');
-const drawScore = document.getElementById('draw-id');
+
 
 function rpsGame(userThrow){    
     // make function rockPaperScissors that takes input as "userThrow"
@@ -35,7 +33,6 @@ function rpsGame(userThrow){
         let computerThrow = Math.floor(Math.random()*3);
         // * 0 is rock 1 is paper 2 is scissors *
 
-
         // start switch using the computerThrow
         switch(computerThrow){
             // in the event that computerThrow is 0:
@@ -44,14 +41,14 @@ function rpsGame(userThrow){
                 // if the userThrow is paper --> log "Win" + increment score[0]
                 // if the userThrow is scissors --> log "Lose" + increment score[2]
                 if(userThrow === "rock"){
-                    score[1]++;
-                    return "Rock-Rock! It's a tie!";
+                    drawNumber++;
+                    //return "Rock-Rock! It's a tie!";
                 } else if (userThrow === "paper"){
-                    score[0]++;
-                    return "Rock-Paper! You win! Way to go!";
+                    winNumber++;
+                    //return "Rock-Paper! You win! Way to go!";
                 } else if (userThrow === "scissors"){
-                    score[2]++;
-                    return "Rock-Scissors! You lose! Get got.";
+                    loseNumber++;
+                    //return "Rock-Scissors! You lose! Get got.";
                 } else {
                     return "Rock Error: Something unexpected rockurred.";
                 }
@@ -62,14 +59,14 @@ function rpsGame(userThrow){
                 // if the userThrow is paper --> log "Tie" + increment score[1]
                 // if the userThrow is scissors --> log "Win" + increment score[0]
                 if(userThrow === "paper"){
-                    score[1]++;
-                    return "Paper-Paper! It's a tie!";
+                    drawNumber++;
+                    //return "Paper-Paper! It's a tie!";
                 } else if (userThrow === "scissors"){
-                    score[0]++;
-                    return "Paper-Scissors! You win! Way to go!";
+                    winNumber++;
+                    //return "Paper-Scissors! You win! Way to go!";
                 } else if (userThrow === "rock"){
-                    score[2]++;
-                    return "Paper-Rock! You lose! Get got.";
+                    loseNumber++;
+                    //return "Paper-Rock! You lose! Get got.";
                 } else {
                     return "Paper Error: Something tear-able has happened.";
                 }
@@ -80,16 +77,16 @@ function rpsGame(userThrow){
                 // if the userThrow is paper --> log "Lose" + increment score[2]
                 // if the userThrow is scissors --> log "Tie" + increment score[1]
                 if(userThrow === "scissors"){
-                    score[1]++
-                    return "Scissors-Scissors! It's a tie!";
+                    drawNumber++
+                    //return "Scissors-Scissors! It's a tie!";
                 } else if (userThrow === "rock"){
-                    score[0]++
-                    return "Scissors-Rock! You win! Way to go!";
+                    winNumber++
+                    //return "Scissors-Rock! You win! Way to go!";
                 } else if (userThrow === "paper"){
-                    score[2]++
-                    return "Scissors-Paper! You lose! Get got.";
+                    loseNumber++
+                    //return "Scissors-Paper! You lose! Get got.";
                 } else {
-                    return "Scissor Error: Scissor me timbers! Something untoward occurred!";
+                    //return "Scissor Error: Scissor me timbers! Something untoward occurred!";
                 }
                 break;
             // set default message to "something horribly wrong has happened"
@@ -100,35 +97,20 @@ function rpsGame(userThrow){
     // end function
     }
 
-    // set variable keepGoing to True
-    let keepGoing = true;
-
-    // keep track of wins, draws, loses
-    let score =[0,0,0]
-
-
     let result = rockPaperScissors(userThrow);
-    alert(result);
+    alert(`${winNumber} + ${loseNumber} + ${drawNumber}`);
     
-    // start while loop (as long as keepGoing is true)
-   // while(keepGoing){
-        
-        
-        // (prompt user "rock - paper - scissors? >") in variable gamePrompt
-        // make sure gamePrompt string is all lower case
-        // let gamePrompt = prompt("rock - paper - scissors? >").toLowerCase();
-        
-        // put gamePrompt in rockPaperScissors
-       // let result = rockPaperScissors(userThrow);
-       // alert(result);
-
-        // ask if user would like to continue or not
-        // let continuePrompt = prompt("Would you like to continue? >");
-        //if(continuePrompt === 'n'){
-          //  alert(`You won ${score[0]} times, drew ${score[1]} times, and lost ${score[2]} times! Try again next time.`);
-            //keepGoing = false;
-        //}
     }
 
 
+const winScore = document.getElementById('win-id');
+let winNumber = 0;
+winScore.textContent = winNumber;
 
+const loseScore = document.getElementById('lose-id');
+let loseNumber = 0;
+loseScore.textContent = loseNumber;
+
+const drawScore = document.getElementById('draw-id');
+let drawNumber = 0;
+drawScore.textContent = drawNumber;
