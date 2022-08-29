@@ -1,3 +1,28 @@
+const choices = document.querySelectorAll('button');
+
+choices.forEach((button) => {
+
+    button.addEventListener('click', () => {
+        alert(button.id);
+    });
+});
+
+const rock = document.getElementById('rock-pic');
+const paper = document.getElementById('paper-pic');
+const scissors = document.getElementById('scissors-pic');
+
+rock.addEventListener('click', () => {
+    alert(rock.id);
+});
+
+paper.addEventListener('click', () => {
+    alert(paper.id);
+});
+
+scissors.addEventListener('click', () => {
+    alert(scissors.id);
+});
+
 function rpsGame(){    
     // make function rockPaperScissors that takes input as "userChoice"
     function rockPaperScissors(userChoice) {
@@ -97,4 +122,6 @@ function rpsGame(){
             keepGoing = false;
         }
     }
-}
+} 
+
+
